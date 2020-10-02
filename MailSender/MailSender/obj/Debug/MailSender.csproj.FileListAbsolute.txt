@@ -1,0 +1,9 @@
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\bin\Debug\MailSender.exe
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\bin\Debug\MailSender.pdb
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.csprojAssemblyReference.cache
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.Form1.resources
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.Properties.Resources.resources
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.csproj.GenerateResource.cache
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.csproj.CoreCompileInputs.cache
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.exe
+C:\Users\Аня Мирченко\Desktop\сетевое программирование\MailSender\MailSender\obj\Debug\MailSender.pdb
