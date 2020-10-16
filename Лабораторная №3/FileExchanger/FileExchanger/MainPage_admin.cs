@@ -71,7 +71,7 @@ namespace FileExchanger
             {
                 admins admin = new admins(this.lgn.Text,this.psswrd.Text,2);
                 string json = JsonConvert.SerializeObject(admin);
-                con.PostJSON("admins",json);
+                con.PostJSON("users", json);
                 MessageBox.Show($"Пользователь {this.lgn.Text} добавлен в систему");
                 LoadAdmins();
             }
@@ -80,7 +80,7 @@ namespace FileExchanger
         private void LoadAdmins()
         {
 
-            string answer = con.GetJSON($"admins?role=2");
+            string answer = con.GetJSON($"users?role=2");
             var ch = this.active_admins;
             ch.Items.Clear();
             var obj = JsonConvert.DeserializeObject<List<admins>>(answer);
@@ -97,7 +97,7 @@ namespace FileExchanger
         private void LoadLocked()
         {
 
-            string answer = con.GetJSON($"admins?role=4");
+            string answer = con.GetJSON($"users?role=4");
             var ch = Locked;
             ch.Items.Clear();
             var obj = JsonConvert.DeserializeObject<List<admins>>(answer);
@@ -107,7 +107,6 @@ namespace FileExchanger
                 item.Tag = i;
                 item.Text = i.login;
                 ch.Items.Add(item);
-
             }
         }
 
@@ -121,7 +120,7 @@ namespace FileExchanger
                         {
                             admns.role = 4;
                             string json = JsonConvert.SerializeObject(admns);
-                            con.PutJSON("admins/"+admns.id, json);
+                            con.PutJSON("users/" + admns.id, json);
                             MessageBox.Show("Выбранные пользователи были заблокированы");
                             LoadAdmins();
                             LoadLocked();
@@ -142,7 +141,7 @@ namespace FileExchanger
                     {
                         admns.role = 2;
                         string json = JsonConvert.SerializeObject(admns);
-                        con.PutJSON("admins/" + admns.id, json);
+                        con.PutJSON("users/" + admns.id, json);
                         MessageBox.Show("Выбранные пользователи были разблокированы");
                         LoadAdmins();
                         LoadLocked();
@@ -222,19 +221,5 @@ namespace FileExchanger
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void csv_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doc_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

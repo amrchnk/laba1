@@ -62,9 +62,12 @@ namespace FileExchanger
                         string s = "";
                         s = now.ToString() + $" пользователь под логином {this.lgn.Text} выполнил вход в систему";
                         activity.Add(s);
-                        MessageBox.Show(s);
-
+                        //MessageBox.Show(s);
                         MainPage_admin data = new MainPage_admin(activity);
+                        SimpleAdmin page = new SimpleAdmin();
+                        page.FormClosed += page_FormClosed;
+                        page.Show();
+                        this.Hide();
                     }
                     else if (o == 4)
                     {
@@ -79,7 +82,7 @@ namespace FileExchanger
         public bool UserCheck(string login, string password)
         {
             Connection con = new Connection();
-            string answer = con.GetJSON($"admins?login={login}&password={password}");
+            string answer = con.GetJSON($"users?login={login}&password={password}");
             if (answer == "[]") return false;
             else return true;
         }
@@ -87,7 +90,7 @@ namespace FileExchanger
         public int CategoryCheck(string login, string password)
         {
             Connection con = new Connection();
-            string answer = con.GetJSON($"admins?login={login}&password={password}");
+            string answer = con.GetJSON($"users?login={login}&password={password}");
 
             admins obj = JsonConvert.DeserializeObject<admins>(answer.Substring(1, answer.Length - 2));
             return obj.role;
@@ -97,6 +100,11 @@ namespace FileExchanger
         {
             this.Show(); //отображение 1-й формы после закрытия 2-й
             this.Close();
+        }
+
+        private void Authorization_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

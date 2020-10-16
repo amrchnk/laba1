@@ -36,6 +36,29 @@ namespace FileExchanger
 
             }
         }
+
+        public string DeleteJSON(string adr)
+        {
+            try
+            {
+                WebRequest request = WebRequest.Create("http://localhost:3000/" + adr);
+                request.Method = "DELETE";
+                request.ContentType = "application/json";
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Close();
+                WebResponse response = request.GetResponse();
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                return responseString;
+            }
+            catch (Exception e)
+            {
+                // Запись сообщения об ошибки для отладки
+                ExceptionMessage = e.Message;
+                return null;
+
+            }
+        }
+
         // метод отправки JSON на сервер, adr - параметр запроса, str - JSON тело запроса
         public string PostJSON(string adr, string str)
         {
@@ -88,5 +111,8 @@ namespace FileExchanger
 
             }
         }
+
+       
+
     }
 }

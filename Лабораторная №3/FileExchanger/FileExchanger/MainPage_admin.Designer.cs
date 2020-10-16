@@ -49,6 +49,7 @@
             this.SFD = new System.Windows.Forms.SaveFileDialog();
             this.report = new System.Windows.Forms.GroupBox();
             this.doings = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.report.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +113,7 @@
             this.groupBox1.Controls.Add(this.login);
             this.groupBox1.Controls.Add(this.password);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(432, 271);
+            this.groupBox1.Location = new System.Drawing.Point(432, 254);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(356, 187);
             this.groupBox1.TabIndex = 12;
@@ -121,43 +122,52 @@
             // 
             // Add
             // 
+            this.Add.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Add.FlatAppearance.BorderSize = 0;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add.Location = new System.Drawing.Point(70, 126);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(234, 30);
             this.Add.TabIndex = 12;
             this.Add.Text = "Добавить";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // unlock
             // 
+            this.unlock.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.unlock.FlatAppearance.BorderSize = 0;
+            this.unlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.unlock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.unlock.Location = new System.Drawing.Point(12, 428);
+            this.unlock.Location = new System.Drawing.Point(12, 411);
             this.unlock.Name = "unlock";
             this.unlock.Size = new System.Drawing.Size(191, 30);
             this.unlock.TabIndex = 13;
             this.unlock.Text = "Разблокировать";
-            this.unlock.UseVisualStyleBackColor = true;
+            this.unlock.UseVisualStyleBackColor = false;
             this.unlock.Click += new System.EventHandler(this.unlock_Click);
             // 
             // toLock
             // 
+            this.toLock.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.toLock.FlatAppearance.BorderSize = 0;
+            this.toLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.toLock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toLock.Location = new System.Drawing.Point(224, 428);
+            this.toLock.Location = new System.Drawing.Point(224, 411);
             this.toLock.Name = "toLock";
             this.toLock.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toLock.Size = new System.Drawing.Size(191, 30);
             this.toLock.TabIndex = 14;
             this.toLock.Text = "Заблокировать";
-            this.toLock.UseVisualStyleBackColor = true;
+            this.toLock.UseVisualStyleBackColor = false;
             this.toLock.Click += new System.EventHandler(this.toLock_Click);
             // 
             // active_admins
             // 
             this.active_admins.CheckBoxes = true;
             this.active_admins.HideSelection = false;
-            this.active_admins.Location = new System.Drawing.Point(224, 298);
+            this.active_admins.Location = new System.Drawing.Point(224, 281);
             this.active_admins.Name = "active_admins";
             this.active_admins.Size = new System.Drawing.Size(191, 124);
             this.active_admins.TabIndex = 15;
@@ -168,7 +178,7 @@
             // 
             this.Locked.CheckBoxes = true;
             this.Locked.HideSelection = false;
-            this.Locked.Location = new System.Drawing.Point(12, 298);
+            this.Locked.Location = new System.Drawing.Point(12, 281);
             this.Locked.Name = "Locked";
             this.Locked.Size = new System.Drawing.Size(191, 124);
             this.Locked.TabIndex = 16;
@@ -179,7 +189,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(42, 253);
+            this.label1.Location = new System.Drawing.Point(42, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 34);
             this.label1.TabIndex = 17;
@@ -190,7 +200,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(265, 254);
+            this.label2.Location = new System.Drawing.Point(265, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 34);
             this.label2.TabIndex = 18;
@@ -201,7 +211,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(6, 19);
+            this.label4.Location = new System.Drawing.Point(7, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 21);
             this.label4.TabIndex = 20;
@@ -213,7 +223,7 @@
             // 
             this.txt.AutoSize = true;
             this.txt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt.Location = new System.Drawing.Point(333, 21);
+            this.txt.Location = new System.Drawing.Point(334, 22);
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(48, 21);
             this.txt.TabIndex = 23;
@@ -226,30 +236,31 @@
             // 
             this.csv.AutoSize = true;
             this.csv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.csv.Location = new System.Drawing.Point(275, 21);
+            this.csv.Location = new System.Drawing.Point(276, 22);
             this.csv.Name = "csv";
             this.csv.Size = new System.Drawing.Size(52, 21);
             this.csv.TabIndex = 22;
             this.csv.TabStop = true;
             this.csv.Text = "*.csv";
             this.csv.UseVisualStyleBackColor = true;
-            this.csv.CheckedChanged += new System.EventHandler(this.csv_CheckedChanged);
             // 
             // doc
             // 
             this.doc.AutoSize = true;
             this.doc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doc.Location = new System.Drawing.Point(213, 21);
+            this.doc.Location = new System.Drawing.Point(214, 22);
             this.doc.Name = "doc";
             this.doc.Size = new System.Drawing.Size(56, 21);
             this.doc.TabIndex = 21;
             this.doc.TabStop = true;
             this.doc.Text = "*.doc";
             this.doc.UseVisualStyleBackColor = true;
-            this.doc.CheckedChanged += new System.EventHandler(this.doc_CheckedChanged);
             // 
             // Save
             // 
+            this.Save.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Save.FlatAppearance.BorderSize = 0;
+            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Save.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Save.Location = new System.Drawing.Point(420, 17);
             this.Save.Name = "Save";
@@ -257,7 +268,7 @@
             this.Save.Size = new System.Drawing.Size(136, 30);
             this.Save.TabIndex = 24;
             this.Save.Text = "Сохранить";
-            this.Save.UseVisualStyleBackColor = true;
+            this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // report
@@ -268,12 +279,13 @@
             this.report.Controls.Add(this.txt);
             this.report.Controls.Add(this.csv);
             this.report.Controls.Add(this.doc);
-            this.report.Location = new System.Drawing.Point(12, 464);
+            this.report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.report.Location = new System.Drawing.Point(12, 453);
             this.report.Name = "report";
-            this.report.Size = new System.Drawing.Size(776, 59);
+            this.report.Padding = new System.Windows.Forms.Padding(4);
+            this.report.Size = new System.Drawing.Size(776, 63);
             this.report.TabIndex = 25;
             this.report.TabStop = false;
-            this.report.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // doings
             // 
@@ -285,11 +297,23 @@
             this.doings.Size = new System.Drawing.Size(776, 174);
             this.doings.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(222, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(356, 19);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Панель управления супер-администратора";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainPage_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.report);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -336,5 +360,6 @@
         private System.Windows.Forms.SaveFileDialog SFD;
         private System.Windows.Forms.GroupBox report;
         private System.Windows.Forms.ListBox doings;
+        private System.Windows.Forms.Label label3;
     }
 }
